@@ -1,0 +1,19 @@
+# Ingnore eclipse files
+*.project
+*.pydevproject
+.settings
+*.tar.gz
+.DS_Store
+
+# ignore python files
+*.pyc
+*.egg
+*egg*
+
+src/log-ci.log
+.coverage
+
+build/
+dist/
+
+

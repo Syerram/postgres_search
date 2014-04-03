@@ -1,0 +1,7 @@
+Django==1.6.2
+South==0.8.4
+celery==3.1.10
+kombu==3.0.14
+psycopg2==2.5.2
+pytz==2014.2
+simplejson==3.4.0

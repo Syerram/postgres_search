@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8"> 
+	<title>Student Searching</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+</head>
+<body ng-app="pgSearch" class="ng-scope">
+
+	<div class="container ng-scope" ng-controller="SearchController" ng-init="search_mgr.init()">
+		<div class="hero-unit">
+			<h1>Student Search</h1>
+		</div>
+		<div class="alert alert-warning ng-binding" ng-bind="search_mgr.status">Done</div>
+		<input type="text" placeholder="Enter name or course info" ng-model="search_mgr.term" ng-enter="search_mgr.search()" class="ng-valid ng-dirty">
+		<button type="button" class="btn btn-primary" ng-click="search_mgr.search(2)">Full text search</button>
+		<button type="button" class="btn btn-warning" ng-click="search_mgr.search(1)">Good ole' LIKE</button>
+		<span class="badge ng-binding" ng-bind="search_mgr.results.length" ng-show="search_mgr.results.length">1</span>
+		<div style="max-width: 340px; padding: 8px 0;" class="well" ng-show="search_mgr.results.length">
+			<ul class="nav nav-list">
+				<li ng-repeat="result in search_mgr.results" class="ng-scope">
+					<span ng-bind="result.title" class="ng-binding">Nick Craver enrolled Python</span></li>
+			</ul>
+		</div>	
+
+	</div>
+
+
+<script type="text/javascript" src="/static/js/angular.min.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
+
+
+</body></html>
